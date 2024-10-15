@@ -1,4 +1,4 @@
-Cython==0.21.2
+Cython
 gevent==1.1b5
 greenlet==0.4.9
 gsocketpool==0.1.5

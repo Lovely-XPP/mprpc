@@ -1,20 +1,23 @@
 # -*- coding: utf-8 -*-
 
 from setuptools import setup, Extension
+from Cython.Build import cythonize
 
 setup(
     name='mprpc',
-    version='0.1.17',
+    version='0.2.0',
     description='A fast MessagePack RPC library',
     long_description=open('README.rst').read(),
     author='Studio Ousia',
     author_email='ikuya@ousia.jp',
     url='http://github.com/studio-ousia/mprpc',
     packages=['mprpc'],
-    ext_modules=[
-        Extension('mprpc.client', ['mprpc/client.c']),
-        Extension('mprpc.server', ['mprpc/server.c'])
-    ],
+    ext_modules=cythonize(
+        [
+            Extension('mprpc.client', ['mprpc/client.pyx']),
+            Extension('mprpc.server', ['mprpc/server.pyx'])
+        ]
+    ),
     license=open('LICENSE').read(),
     include_package_data=True,
     keywords=['rpc', 'msgpack', 'messagepack', 'msgpackrpc', 'messagepackrpc',
@@ -40,5 +43,5 @@ setup(
         'nose',
         'mock',
     ],
-    test_suite = 'nose.collector'
+    test_suite='nose.collector'
 )
