@@ -14,13 +14,15 @@ Installation
 Python 3.7 and higher
 ^^^^^^^^^^
 To install mprpc, 
+
 .. code-block:: bash
-    $ git clone https://github.com/Lovely-XPP/mprpc
-    $ cd mprpc
-    $ pip install -r requirments.txt
-    $ cython mprpc/client.pyx
-    $ cython mprpc/client.pyx
-    $ pip install .
+
+    git clone https://github.com/Lovely-XPP/mprpc
+    cd mprpc
+    pip install -r requirments.txt
+    cython mprpc/client.pyx
+    cython mprpc/client.pyx
+    pip install .
 
 Python 3.7 and lower
 ^^^^^^^^^^
