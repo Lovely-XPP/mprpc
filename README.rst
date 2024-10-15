@@ -9,6 +9,21 @@ mprpc is a lightweight `MessagePack RPC <https://github.com/msgpack-rpc/msgpack-
 Installation
 ------------
 
+⚠️ **NOTICE: This Repo support python version > 3.7, but only support souce code installation.**
+
+Python 3.7 and higher
+^^^^^^^^^^
+To install mprpc, 
+.. code-block:: bash
+    $ git clone https://github.com/Lovely-XPP/mprpc
+    $ cd mprpc
+    $ pip install -r requirments.txt
+    $ cython mprpc/client.pyx
+    $ cython mprpc/client.pyx
+    $ pip install .
+
+Python 3.7 and lower
+^^^^^^^^^^
 To install mprpc, simply:
 
 .. code-block:: bash
